@@ -27,7 +27,7 @@ Interactive UI Design: Designed an executive layout transforming standard lists 
 ```text
 FinanceProject/
 │
-├── Personal_Finance_Dataset.csv.csv   # Raw transaction data (Input)
+├── Personal_Finance_Dataset.csv       # Raw transaction data (Input)
 ├── run_pipeline.py                    # Unified Python ETL script
 ├── cleaned_finance_data.csv           # Enriched data payload (Output)
 ├── finance_dashboard.pbix             # Live Power BI dashboard file
