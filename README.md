@@ -1,77 +1,46 @@
 # Minor-Project
-# Personal Finance Optimizer: Python + Power BI
+# Personal Finance Pipeline & Business Intelligence Dashboard
+###  3rd-Year B.Tech Minor Project Submission
 
-An automated end-to-end data pipeline that transforms messy bank statements into actionable financial insights.
+---
 
-## Project Overview
-
-Most bank statements and UPI logs are difficult to analyze because they are filled with transaction IDs and inconsistent naming. This project automates the **ETL (Extract, Transform, Load)** process using Python and provides a professional-grade visualization dashboard using Power BI.
-
-### Key Features
-
-* **Automated Categorization:** Uses Python & Regular Expressions (Regex) to map messy transaction strings (e.g., `UPI-ZOMATO-1234@okaxis`) into clean categories like *Food, Bills, and Shopping*.
-* **Modular Architecture:** Organized into distinct Python modules for better maintainability.
-* **Advanced Analytics:** Implements **DAX (Data Analysis Expressions)** in Power BI to calculate Month-over-Month (MoM) spending growth.
-* **Interactive Dashboard:** Drill-down capabilities to explore spending by category and date.
+## Abstract
+Raw financial datasets often contain text-based entries, mismatched datatypes, and lack proper calendar metrics needed for time-series analysis. This project implements an automated **ETL (Extract, Transform, Load) Pipeline** using Python to handle column validations, filter transaction flows, and engineer date-based attributes. The cleaned payload is then mapped to **Microsoft Power BI** to create a fully interactive corporate analytical dashboard driven by custom **DAX (Data Analysis Expressions)**.
 
 ---
 
 ## Tech Stack
-
-* **Language:** Python 3.x
-* **Libraries:** Pandas (Data Manipulation), Plotly (Interactive Charts), Re (Regex for Text Cleaning)
-* **BI Tool:** Microsoft Power BI
-* **Dataset:** [Personal Finance Dataset from Kaggle]
-
+* **Programming Language:** Python 3.x
+* **Core Library:** Pandas (Data Wrangling & Vectorized Calculations)
+* **Business Intelligence Engine:** Microsoft Power BI Desktop
+* **Data Source:** Structured Personal Ledger Registries (`Personal_Finance_Dataset.csv.csv`)
 ---
+Key Learning Outcomes
+Data Normalization: Learned how to handle dirty dates and enforce type constraints using Python's Pandas package.
 
-## Project Structure
+BI Ingestion Pipelines: Mastered importing custom engineered datasets into Power BI and overriding default alphabetical string axes sorting using numeric sorting schemas.
 
+Interactive UI Design: Designed an executive layout transforming standard lists into space-saving horizontal tile buttons for cross-filtering.
+---
+---
+## Project Directory Structure
 ```text
-├── data_manager.py     # ETL logic (Cleaning & Categorization)
-├── analyzer.py         # Statistical calculations & Budget alerts
-├── main.py             # Entry point / Execution script
-├── finance_dashboard.pbix # Power BI Dashboard file
-└── cleaned_finance_data.csv # Final output for BI tools
-
+FinanceProject/
+│
+├── Personal_Finance_Dataset.csv.csv   # Raw transaction data (Input)
+├── run_pipeline.py                    # Unified Python ETL script
+├── cleaned_finance_data.csv           # Enriched data payload (Output)
+├── finance_dashboard.pbix             # Live Power BI dashboard file
+└── README.md                          # Project documentation
 ```
-
 ---
+Project Credentials
+Student Name: BHUMIKA MATE
 
-## ⚙️ How to Run
+Enrollment Number: 0103AD231058
 
-1. **Prepare the Environment:**
-```bash
-pip install pandas plotly
+Course: Bachelor of Technology (B.Tech), 3rd Year
 
-```
+Branch: ARTIFICIAL INTELLIGENCE & DATA SCIENCE
 
-
-2. **Run the Python Pipeline:**
-Execute the main script to clean the raw data and generate the cleaned CSV.
-```bash
-python main.py
-
-```
-
-
-3. **Open the Dashboard:**
-* Open `finance_dashboard.pbix` in Power BI Desktop.
-* Click **Refresh** to load the newly cleaned data from `cleaned_finance_data.csv`.
-
-
-
----
-
-## 📈 Insights & Results
-
-* **Automatic Sorting:** Successfully categorized 90%+ of transactions accurately using keyword mapping.
-* **Budgeting:** Implemented an alert system that triggers warnings in the terminal when category limits are exceeded.
-* **Financial Awareness:** The MoM metric revealed a [X]% increase in discretionary spending, allowing for immediate budget adjustments.
-
----
-
-# Author
-Bhumika Mate
-* 3rd Year B.Tech Student
-* Interest: Data Science 
+College: LAKSHMI NARAIN COLLEGE OF TECHNOLOGY, BHOPAL
